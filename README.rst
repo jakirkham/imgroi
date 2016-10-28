@@ -25,7 +25,7 @@ imgroi
 A Python library for working with ROIs from images.
 
 
-* Free software: BSD license
+* Free software: BSD 3-Clause
 * Documentation: https://imgroi.readthedocs.io.
 
 
