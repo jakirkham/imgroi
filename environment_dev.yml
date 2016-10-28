@@ -16,3 +16,4 @@ dependencies:
 
   # Requirements
   - numpy==1.11.1
+  - mahotas==1.4.3
