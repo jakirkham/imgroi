@@ -4,6 +4,8 @@ __date__ = "$Oct 28, 2016 15:26$"
 
 import numpy
 
+import mahotas
+
 
 def label_mask_stack(new_masks, dtype=None):
     """
@@ -73,3 +75,64 @@ def label_mask_stack(new_masks, dtype=None):
         )
 
     return new_lbl_img
+
+
+def find_contours(img):
+    """
+        Takes an image and extracts contours from the mask.
+
+        Args:
+            a_image(numpy.ndarray):            takes an image.
+
+        Returns:
+            (numpy.ndarray):                   an array with contours.
+
+        Examples:
+
+            >>> a = numpy.array([[ True,  True, False],
+            ...                  [False, False, False],
+            ...                  [ True,  True,  True]], dtype=bool)
+
+            >>> find_contours(a)
+            array([[ True,  True, False],
+                   [False, False, False],
+                   [ True,  True,  True]], dtype=bool)
+
+            >>> find_contours(numpy.eye(3))
+            array([[ 1.,  0.,  0.],
+                   [ 0.,  1.,  0.],
+                   [ 0.,  0.,  1.]])
+
+            >>> a = numpy.array([
+            ...     [False, False,  True, False, False, False,  True],
+            ...     [ True, False, False, False,  True, False, False],
+            ...     [ True,  True, False,  True,  True, False,  True],
+            ...     [ True, False, False,  True,  True, False, False],
+            ...     [ True, False, False, False, False, False, False],
+            ...     [False,  True, False, False, False, False,  True],
+            ...     [False,  True,  True, False, False, False, False]
+            ... ], dtype=bool)
+
+            >>> find_contours(a)
+            array([[False, False,  True, False, False, False,  True],
+                   [ True, False, False, False,  True, False, False],
+                   [ True,  True, False,  True,  True, False,  True],
+                   [ True, False, False,  True,  True, False, False],
+                   [ True, False, False, False, False, False, False],
+                   [False,  True, False, False, False, False,  True],
+                   [False,  True,  True, False, False, False, False]], dtype=bool)
+
+
+    """
+
+    struct = numpy.ones((3,) * img.ndim, dtype=bool)
+
+    mask = (img != 0)
+    mask ^= mahotas.erode(
+        mask,
+        struct
+    )
+
+    contours = img * mask
+
+    return contours
