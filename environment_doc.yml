@@ -1,0 +1,14 @@
+name: imgroi_env
+
+channels:
+  - conda-forge
+
+dependencies:
+  # General dependencies
+  - pip==9.0.1
+  - wheel==0.29.0
+  - Sphinx==1.5.1
+
+  # Requirements
+  - numpy==1.11.1
+  - mahotas==1.4.3

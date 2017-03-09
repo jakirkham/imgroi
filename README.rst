@@ -5,13 +5,19 @@ imgroi
 
 .. image:: https://img.shields.io/pypi/v/imgroi.svg
         :target: https://pypi.python.org/pypi/imgroi
+        :alt: PyPI
 
-.. image:: https://img.shields.io/travis/jakirkham/imgroi.svg
+.. image:: https://anaconda.org/conda-forge/imgroi/badges/version.svg
+        :target: https://anaconda.org/conda-forge/imgroi
+        :alt: conda-forge
+
+.. image:: https://img.shields.io/travis/jakirkham/imgroi/master.svg
         :target: https://travis-ci.org/jakirkham/imgroi
+        :alt: Travis CI
 
 .. image:: https://readthedocs.org/projects/imgroi/badge/?version=latest
         :target: https://imgroi.readthedocs.io/en/latest/?badge=latest
-        :alt: Documentation Status
+        :alt: Read the Docs
 
 .. image:: https://coveralls.io/repos/github/jakirkham/imgroi/badge.svg
         :target: https://coveralls.io/github/jakirkham/imgroi
