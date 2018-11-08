@@ -11,5 +11,5 @@ dependencies:
   - python-coveralls==2.5.0
 
   # Requirements
-  - numpy==1.11.3
-  - mahotas==1.4.3
+  - numpy==1.15.4
+  - mahotas==1.4.4
