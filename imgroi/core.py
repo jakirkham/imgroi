@@ -24,6 +24,8 @@ def label_mask_stack(new_masks, dtype=None):
 
         Examples:
 
+            >>> numpy.set_printoptions(legacy="1.13")
+
             >>> label_mask_stack(
             ...     numpy.array([[[1, 0, 0, 0],
             ...                   [0, 0, 0, 0],
@@ -88,6 +90,8 @@ def find_contours(img):
             (numpy.ndarray):                   an array with contours.
 
         Examples:
+
+            >>> numpy.set_printoptions(legacy="1.13")
 
             >>> a = numpy.array([[ True,  True, False],
             ...                  [False, False, False],
